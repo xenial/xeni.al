@@ -55,21 +55,16 @@ export class Theme {
     }
 
     async randomize() {
-        let response = await fetch("http://colormind.io/api/", {
-            method: "POST",
-            body: JSON.stringify({model: "ui"})
-        })
-
+        let response = await fetch("../json/themes.json");
         let json = await response.json();
-        for (let i = 0; i < json.result.length; i++) {
-            let color = new Color(
-                json.result[i][0],
-                json.result[i][1],
-                json.result[i][2])
-
-            this.colors[i] = color;
-        }
-
-        this.update();
+        let theme = json[Math.floor(Math.random() * json.length)];
+        
+        this.set(
+            new Color(theme[0]),
+            new Color(theme[1]),
+            new Color(theme[2]),
+            new Color(theme[3]),
+            new Color(theme[4])
+        )
     }
 }
