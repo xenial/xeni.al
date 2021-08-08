@@ -22,6 +22,10 @@ let paths = [
 
 let audioReqID = null;
 
+let initAudio = () => {
+    audio = new AudioWrapper(paths[pathIndex]);
+}
+
 let prevSong = () => {
     pathIndex -= 1;
 
@@ -41,7 +45,11 @@ let nextSong = () => {
 }
 
 let changeSong = () => {
+    if (!audio) {
+        initAudio();
+    }
     audio.change(paths[pathIndex]);
+
     audio.audio.addEventListener("ended", () => {
         nextSong();
     })
@@ -87,6 +95,14 @@ let audioStars = () => {
 }
 
 let audioHandler = () => {
+    if (!audio) {
+        initAudio();
+
+        audio.audio.addEventListener("ended", () => {
+            nextSong();
+        })
+    }
+
     if (playing == false) {
         if (audio.audio.currentTime == 0) {
             stars.clear();
@@ -125,11 +141,6 @@ window.onload = () => {
         new Color(getComputedStyle(document.documentElement).getPropertyValue("--dark-accent")),
         new Color(getComputedStyle(document.documentElement).getPropertyValue("--dark-shade"))
     );
-
-    audio = new AudioWrapper(paths[pathIndex]);
-    audio.audio.addEventListener("ended", () => {
-        nextSong();
-    })
 
     document.getElementById("volume").oninput = () => {
         audio.audio.volume = document.getElementById("volume").value / 100;
