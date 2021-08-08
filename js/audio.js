@@ -9,7 +9,6 @@ export class AudioWrapper {
 
     init (src) {
         this.audio = new Audio(src);
-        this.audio.volume = 0.3;
         this.context = new window.AudioContext();
         this.analyser = this.context.createAnalyser();
         this.audioSrc = this.context.createMediaElementSource(this.audio);

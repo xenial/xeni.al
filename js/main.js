@@ -64,6 +64,7 @@ let nowPlaying = (bool) => {
         elem.innerHTML = paths[pathIndex].match(re)[1];
         playing = true;
         audio.play();
+        audio.audio.volume = document.getElementById("volume").value / 100;
     }
 }
 
@@ -129,6 +130,10 @@ window.onload = () => {
     audio.audio.addEventListener("ended", () => {
         nextSong();
     })
+
+    document.getElementById("volume").oninput = () => {
+        audio.audio.volume = document.getElementById("volume").value / 100;
+    }
     
     document.getElementById("logo").contentDocument.getElementById("g10").addEventListener("click", themeHandler);
     document.getElementById("playbtn").addEventListener("click", audioHandler);
