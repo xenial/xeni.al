@@ -1,0 +1,141 @@
+:root {
+    --light-shade: #f9f8f8;
+    --light-accent: #afc1c7;
+    --main-color: #7d918c;
+    --dark-accent: #9eaeb4;
+    --dark-shade: #20262a;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-shade);
+}
+
+b {
+    display: inline;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    color: var(--light-shade);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-shade);
+    user-select: none;
+}
+
+#logo {
+    z-index: 1;
+    margin-bottom: 1rem;
+    width: 20rem;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 2rem;
+}
+
+#starcanvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#nowplaying {
+    font-size: 1rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer b {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    color: var(--light-shade);
+    opacity: 0%;
+}
+
+.fadeout {
+    animation: fadeout 6000ms forwards;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+b.button, a.button, i.button {
+    color: var(--light-shade);
+    animation: colorchange2 100ms forwards;
+}
+
+b.button:hover, a.button:hover, i.button:hover {
+    animation: colorchange 500ms forwards;
+}
+
+g.button {
+    fill: var(--light-shade);
+    animation: fillchange2 100ms forwards;
+
+}
+
+g.button:hover {
+    animation: fillchange 500ms forwards;
+}
+
+@keyframes colorchange {
+    from {
+        color: var(--light-shade);
+    }
+    to {
+        color: var(--light-accent);
+    }
+}
+
+@keyframes colorchange2 {
+    from {
+        color: var(--light-accent);
+    }
+    to {
+        color: var(--light-shade);    
+    }
+}
+
+@keyframes fillchange {
+    from {
+        fill: var(--light-shade);
+    }
+    to {
+        fill: var(--light-accent);
+    }
+}
+
+@keyframes fillchange2 {
+    from {
+        fill: var(--light-accent);
+    }
+    to {
+        fill: var(--light-shade);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
