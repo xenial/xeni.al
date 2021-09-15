@@ -154,7 +154,7 @@ window.onload = () => {
     let discord = document.getElementById("discord");
     let bitcoin = document.getElementById("bitcoin");
     let ethereum = document.getElementById("ethereum");
-    discord.text = "xenial#9999";
+    discord.text = "xenial#4146";
     bitcoin.text = "1HHZh8APbfM7Sbx5nMi6YQiYEUze8DmmEA";
     ethereum.text = "0xf82d7ef81d9a9f73ef47a865f9cc7d7f0c024a07";
     discord.addEventListener("click", writeClipboard);
