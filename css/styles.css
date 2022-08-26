@@ -1,203 +1,44 @@
-:root {
-    --light-shade: #f9f8f8;
-    --light-accent: #afc1c7;
-    --main-color: #7d918c;
-    --dark-accent: #9eaeb4;
-    --dark-shade: #20262a;
-}
-
-a {
-    text-decoration: none;
-    color: var(--light-shade);
-}
-
-b {
-    display: inline;
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;
-    color: var(--light-shade);
-}
-
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--dark-shade);
-    user-select: none;
+    background-color: black;
 }
 
-#logo {
-    z-index: 1;
-    margin-bottom: 1rem;
-    width: 20rem;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+p {
+    color: #cccccc;
     text-align: center;
-    font-size: 2rem;
+    line-height: 15px;
+    margin: 0;
+    font-family: 'Jetbrains Mono';
+    font-size: 12px;
 }
 
-#starcanvas {
-    position: fixed;
-    left: 0;
-    top: 0;
+a {
+    color: #cccccc;
+    text-decoration-color: #cccccc;
 }
 
-#nowplaying {
-    font-size: 1rem;
-    position: absolute;
+.logo {
+    -webkit-filter: invert(90%);
+    width: 150px;
+    position: relative;
+    left: 50%;
+    top: -22%;
     transform: translateX(-50%);
-    white-space: nowrap;
-}
-
-.range {
-    background: var(--dark-accent);
-    color: var(--dark-accent);
-    width: 10rem;
-    height: 0.5rem;
-    border-radius: 1rem;
-    border-style: none;
-    border-color: transparent;
     padding: 0;
-    appearance: none;
+    margin: 0;
 }
 
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 1rem;
-    height: 1rem;
-    background: var(--light-shade);
-    border-radius: 1rem;
-    border-style: none;
-  }
-  
-.range::-moz-range-thumb {
-    width: 1rem;
-    height: 1rem;
-    background: var(--light-shade);
-    border-radius: 1rem;
-    border-style: none;
-    animation: bgchange2 100ms forwards;
-}
-
-.range::-webkit-slider-thumb:hover {
-    background: var(--light-accent);
-    cursor: pointer;
-  }
-  
-.range::-moz-range-thumb:hover {
-    animation: bgchange 500ms forwards;
-    cursor: pointer;
-}
-
-.footer {
+.main {
     position: absolute;
-    bottom: 1rem;
+    height: 235px;
+    width: 300px;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    font-size: 2rem;
-    text-align: center;
-    word-spacing: 1rem;
-}
-
-.footer b {
-    display: block;
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;
-    color: var(--light-shade);
-    opacity: 0%;
-}
-
-.fadeout {
-    animation: fadeout 6000ms forwards;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-b.button, a.button, i.button {
-    color: var(--light-shade);
-    animation: colorchange2 100ms forwards;
-}
-
-b.button:hover, a.button:hover, i.button:hover {
-    animation: colorchange 500ms forwards;
-}
-
-g.button {
-    fill: var(--light-shade);
-    animation: fillchange2 100ms forwards;
-
-}
-
-g.button:hover {
-    animation: fillchange 500ms forwards;
-}
-
-@keyframes bgchange {
-    from {
-        background: var(--light-shade);
-    }
-    to {
-        background: var(--light-accent);
-    }
-}
-
-@keyframes bgchange2 {
-    from {
-        background: var(--light-accent);
-    }
-    to {
-        background: var(--light-shade);    
-    }
-}
-
-@keyframes colorchange {
-    from {
-        color: var(--light-shade);
-    }
-    to {
-        color: var(--light-accent);
-    }
-}
-
-@keyframes colorchange2 {
-    from {
-        color: var(--light-accent);
-    }
-    to {
-        color: var(--light-shade);    
-    }
-}
-
-@keyframes fillchange {
-    from {
-        fill: var(--light-shade);
-    }
-    to {
-        fill: var(--light-accent);
-    }
-}
-
-@keyframes fillchange2 {
-    from {
-        fill: var(--light-accent);
-    }
-    to {
-        fill: var(--light-shade);
-    }
-}
-
-@keyframes fadeout {
-    from {
-        opacity: 100%;
-    }
-    to {
-        opacity: 0%;
-    }
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-width: 1px;
+    border-color: #222222;
+    border-style: solid;
+    background: rgba(0,0,0,0.5);
+    padding: 0;
 }
