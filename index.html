@@ -1,45 +1,30 @@
 <html>
     <head>
-        <title>xenial</title>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"> 
+        <title>xeni.al</title> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains Mono" />
 
-        <link rel="stylesheet" href="css/styles.css">
-
-        <script src="https://kit.fontawesome.com/7732267343.js" crossorigin="anonymous"></script>
-
-        <script type="module" src="js/stars.js"></script>
-        <script type="module" src="js/theme.js"></script>
-        <script type="module" src="js/audio.js"></script>
-        <script type="module" src="js/main.js"></script>
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
-
     <body>
-        <canvas id="starcanvas" width=1920></canvas>
-        
-        <div class="center">
-            <object id="logo" type="image/svg+xml" data="img/logo.svg"></object>
-            <br>
-            <input id="volume" class="range" type="range" min="0" max="100" value="50">
-            <br>
-            <b class="button" id="prevbtn"><</b> <b class="button" id="playbtn">$$$</b> <b class="button" id="nextbtn">></b>
-            <br>
-            <b id="nowplaying"></b>
+        <div class="main">
+            <img class="logo" src="img/logo.svg" />
+
+            <p>
+                contacts:<br>
+                -----------------------<br>
+                root@xeni.al<br>
+                xenial#4146<br><br>
+                links:<br>
+                -----------------------<br>
+                <a href="https://www.steamcommunity.com/id/cdev">steam</a>
+                <a href="https://www.github.com/xenial">github</a>
+                <a href="https://www.youtube.com/channel/UCRUMyeQEZnv7kkSkLZttOew">youtube</a> <br>
+                <a href="https://soundcloud.com/xvnial">soundcloud</a>
+                <a href="https://twitter.com/xenialv_">twitter</a>
+            </p>
         </div>
 
-        <div class="footer">
-            <b id="notification">copied to clipboard</b>
-            <br><br>
-            <a target="#blank" href="https://soundcloud.com/xvnial" class="button fab fa-soundcloud"></a>
-            <a target="#blank" href="https://www.github.com/xenial" class="button fab fa-github"></a>
-            <a target="#blank" href="https://www.steamcommunity.com/id/cdev" class="button fab fa-steam"></a>
-            <a target="#blank" href="https://www.youtube.com/channel/UCRUMyeQEZnv7kkSkLZttOew" class="button fab fa-youtube"></a>
-            <i id="discord" class="button fab fa-discord"></i>
-            <i id="bitcoin" class="button fab fa-bitcoin"></i>
-            <i id="ethereum" class="button fab fa-ethereum"></i>
-        </div>
-    </body>
-
+        <canvas id="stars" />
+    </body>   
+    <script src="js/stars.js"></script>
 </html>
