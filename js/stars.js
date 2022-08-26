@@ -1,7 +1,7 @@
 let noise = 0.2,    // y delta variance %
 delta = 0.1,          // y delta
 count = 50,        // stars per 1920*1080
-sizes = 4;          // star size count
+sizes = 2;          // star size count
 
 count /= (1920 * 1080);
 
