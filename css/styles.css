@@ -19,6 +19,7 @@ a {
 }
 
 .logo {
+    display: block;
     -webkit-filter: invert(90%);
     width: 150px;
     position: relative;
